@@ -1,76 +1,50 @@
-# AI Strategic Consultant System
-# نظام التحليل الاستراتيجي متعدد الوكلاء
+# 💎 Verdent: AI Strategic Consultant (Oracle AI)
+### نظام استشاري استثماري متقدم يعتمد على "هيكلية الماس الموجه" (Directed Diamond Topology)
 
-A multi-agent strategic analysis system using the Directed Diamond Topology and Graph of Thoughts (GoT) framework.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Framework](https://img.shields.io/badge/Framework-Flask-lightgrey.svg)](https://flask.palletsprojects.com/)
+[![AI-Architecture](https://img.shields.io/badge/Architecture-Directed_Diamond-blueviolet.svg)](#)
 
-## System Architecture
+نظام متطور للتحليل الاستراتيجي متعدد الوكلاء (Multi-Agent System) يستخدم إطار عمل **Graph of Thoughts (GoT)** لتحليل الأفكار الاستثمارية والمشاريع الناشئة بدقة استشارية احترافية.
 
-### Phase 1: The Divergence Layer
-Three parallel agents analyze different aspects:
-- **Market Logic Agent**: Market dynamics and demand-side gaps
-- **Financial Sustainability Agent**: Unit economics and financial viability
-- **Competitive Durability Agent**: Entry barriers and moat strength
+---
 
-### Phase 2: The Synthesis Node
-- **Strategic Synthesizer Agent**: Performs conflict resolution and produces final strategic memo
+## 🏗️ معمارية النظام (System Architecture)
 
-## Installation
+يعمل النظام من خلال مسارين متكاملين لضمان دقة "الحكم الاستثماري":
 
-```bash
-pip install -r requirements.txt
-```
+### المرحلة الأولى: طبقة التشعب (Phase 1: The Divergence Layer)
+ثلاثة وكلاء أذكياء يعملون بشكل متوازٍ لتحليل الفكرة من زوايا مختلفة:
+* **Market Logic Agent (M):** يركز على ديناميكيات السوق، فجوات الطلب، وسلوك المستهلك.
+* **Financial Sustainability Agent (F):** يحلل اقتصاديات الوحدة (Unit Economics)، الربحية، والاستدامة المالية.
+* **Competitive Durability Agent (C):** يقيم حواجز الدخول، قوة "الخندق" التنافسي (Moat)، واستمرارية الميزة التنافسية.
 
-## Configuration
+### المرحلة الثانية: عقدة التوليف (Phase 2: The Synthesis Node)
+* **Strategic Synthesizer Agent:** يعمل كمدير تنفيذي يقوم بفض النزاعات بين تقارير الوكلاء، وموازنة المخاطر مقابل الفرص لإصدار **المذكرة الاستراتيجية النهائية**.
 
-Create a `.env` file in the project root:
+---
 
-```
-OPENAI_API_KEY=your_api_key_here
-```
+## 🚀 المميزات الرئيسية (Features)
+* **التحليل المتوازي (Parallel Processing):** معالجة فورية عبر عدة مسارات ذكاء اصطناعي.
+* **فض النزاعات (Conflict Resolution):** خوارزمية ذكية لموازنة الآراء المتضاربة بين الوكلاء.
+* **مخرج ثنائي اللغة:** تحليل باللغة العربية مع الحفاظ على المصطلحات التقنية الإنجليزية.
+* **واجهة مستخدم فاخرة:** لوحة تحكم سوداء (Dark Dashboard) تعرض النتائج بشكل تفاعلي.
+* **مؤشرات الثقة:** تقديم نسبة ثقة (Confidence Score) لكل تحليل ومستوى المخاطر.
 
-## Usage
+---
 
-```python
-from orchestrator import AIConsultantOrchestrator
+## 📁 هيكلية المشروع (Project Structure)
 
-orchestrator = AIConsultantOrchestrator()
-
-business_idea = """
-منصة توصيل مخبوزات محلية يومية عبر الاشتراكات الشهرية في الرياض.
-الفكرة: ربط المخابز الصغيرة بالعملاء، مع ضمان جودة وطازجية يومية.
-"""
-
-result = orchestrator.analyze(business_idea)
-```
-
-## Project Structure
-
-```
+```text
 AI_Consultant/
-├── agents/
-│   ├── __init__.py
-│   ├── market_logic.py
-│   ├── financial_sustainability.py
-│   ├── competitive_durability.py
-│   └── strategic_synthesizer.py
-├── orchestrator.py
-├── requirements.txt
-└── README.md
-```
-
-## Output Format
-
-The system provides a comprehensive dashboard in Arabic with:
-- Executive Summary (ملخص تنفيذي)
-- Detailed Analysis (التحليل التفصيلي لكل مسار)
-- Risk Level & Confidence Score (مستوى المخاطر ونسبة الثقة)
-- Final Recommendation (التوصية النهائية)
-
-## Features
-
-- Multi-agent parallel processing
-- Conflict resolution between agent outputs
-- Bilingual output (Arabic with English technical terms)
-- Rich CLI interface with colored output
-- Structured JSON responses
-- Comprehensive strategic analysis
+├── agents/                      # وكلاء الذكاء الاصطناعي
+│   ├── market_logic.py          # وكيل منطق السوق
+│   ├── financial_sustainability.py # وكيل الاستدامة المالية
+│   ├── competitive_durability.py  # وكيل المتانة التنافسية
+│   └── strategic_synthesizer.py   # وكيل التوليف الاستراتيجي
+├── static/                      # الملفات الثابتة (CSS/JS)
+├── templates/                   # واجهات العرض (HTML)
+├── app.py                       # خادم الويب (Flask API)
+├── orchestrator.py              # محرك إدارة الوكلاء
+├── requirements.txt             # المكتبات المطلوبة
+└── .env                         # مفاتيح الوصول (مخفي)
